@@ -1,4 +1,4 @@
-package vrealize
+package main
 
 import (
 	"fmt"
@@ -71,7 +71,8 @@ func (c *Config) Client() (*govrealize.Client, error) {
 	_, err = vrealizeBase.New().Set("Accept", "application/json").Post(path).BodyJSON(body).ReceiveSuccess(token)
 
 	if err != nil {
-		log.Fatal(err)
+//		log.Panic(err)
+		return nil, err
 	}
 
 	tokenSource := &TokenSource{

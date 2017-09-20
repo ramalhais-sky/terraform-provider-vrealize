@@ -21,26 +21,26 @@ provider "vrealize" {
 Define resource
 ```golang
 resource "vrealize_machine" "test" {
-    catalogItemRefId = "xxxxxxx-xxxx-xxxxx-xxxx-xxxxxxxxx"
-    tenantRef = "vsphere.local"
-    subTenantRef = "xxxxxxx-xxxx-xxxxx-xxxx-xxxxxxxxx"
-		requestData = {
+    catalog_item_ref_id = "xxxxxxx-xxxx-xxxxx-xxxx-xxxxxxxxx"
+    tenant_ref = "vsphere.local"
+    sub_tenant_ref = "xxxxxxx-xxxx-xxxxx-xxxx-xxxxxxxxx"
+		request_data = {
 			key = "provider-provisioningGroupId"
 			value = "xxxxxxx-xxxx-xxxxx-xxxx-xxxxxxxxx"
 		}
-		requestData = {
+		request_data = {
 			key = "provider-VirtualMachine.CPU.Count"
 			value = 1
 		}
-		requestData = {
+		request_data = {
 			key = "provider-VirtualMachine.Memory.Size"
 			value = 1024
 		}
-		requestData = {
+		request_data = {
 			key = "provider-Cafe.Shim.VirtualMachine.Description"
 			value = "Test API request"
 		}
-		requestData = {
+		request_data = {
 			key = "reasons"
 			value = "Test reason"
 		}

@@ -1,4 +1,4 @@
-package vrealize
+package main
 
 import (
 	"testing"
